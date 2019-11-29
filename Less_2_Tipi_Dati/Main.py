@@ -92,3 +92,21 @@ lista_nomi = list(set_nomi)
 # ---- FROZENSET ----
 
 names = frozenset(set_nomi)
+
+# ---- DIZIONARI ----
+# Permettono di immagazzinare i dati in strutture key value
+
+items = {"latte": 3, "riso": 2, "carne": 34}
+items["latte"]  # da 3
+items["latte"] = 2
+items["cereali"] = 1  # aggiunge l'eleemnto
+items["yogurt"] = {"fragola": 2, "bianco": 4}
+
+items["yogurt"]["fragola"] = 23
+
+items.keys()  # ritorna tutte le chiavi
+keys = list(items.keys())
+values = list(items.values())
+
+print(keys)
+print(values)
