@@ -36,3 +36,26 @@ for i, j in enumerate(shopping_list):
 # Ciclo while
 
 n = int(input("Fino a quanto vuoi contare?"))
+
+i = 0
+while (i < n):
+    if (i % 3 == 0):  # se i è multiplo di 3
+        i += 2  # salto l'iterazione (non stampo)
+        continue  # esco dall'iteraizone
+    elif (i >= 25):
+        break  # esco dal ciclo
+    print(i)
+    i += 2
+
+#IF e Operatori logici
+
+if (n<0):
+    print("%d non è un numero positivo")
+elif (n % 2 == 0):
+    print("%d è un numero pari")
+else:
+    print("%d è un numero dispari")
+
+1 == 4 and 2 == 2
+1 == 4 or 2 == 2
+not 2 ==1
