@@ -2,7 +2,7 @@
 # --- LISTE ----
 
 # Si insieriscono gli elementi tra le parentesi quadre e si indirizzano come con gli array
-# si può prendere solo una parte della lista con l'oreazioen di slicing
+# si può prendere solo una parte della lista con l'oreazione di slicing
 
 my_list = [10, 5, 6, 7, 3, 2, 5, 67]
 
@@ -99,7 +99,7 @@ names = frozenset(set_nomi)
 items = {"latte": 3, "riso": 2, "carne": 34}
 items["latte"]  # da 3
 items["latte"] = 2
-items["cereali"] = 1  # aggiunge l'eleemnto
+items["cereali"] = 1  # aggiunge l'elemento
 items["yogurt"] = {"fragola": 2, "bianco": 4}
 
 items["yogurt"]["fragola"] = 23
