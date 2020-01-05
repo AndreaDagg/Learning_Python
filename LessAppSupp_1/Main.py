@@ -7,6 +7,7 @@ Per torvare il valore ottimo devo ottimizzare il Gradietn Descent
 import pandas as pd
 import numpy as np
 
+# L'espressione regolare dopo l'url serve per indicare che le colonne sono separate da un nuymero variabile di spazi
 boston = pd.read_csv("https://archive.ics.uci.edu/ml/machine-learning-databases/housing/housing.data", sep='\s+',
                      usecols=[5, 13], names=["RM", "MEDV"])
 print(boston.head())
@@ -51,5 +52,22 @@ plt.scatter(X_train, Y_train, c="green", edgecolors="white")
 plt.scatter(X_test, Y_test, c="blue", edgecolors="white")
 plt.xlabel("Numero Medio di stanze [RM]")
 plt.ylabel("Valore in $ [MEDV]")
-plt.plot(X_test,Y_pred)
+plt.plot(X_test, Y_pred)
 plt.show()
+
+"""
+REGRESSIONE LINEARE MULTIPLA: Per tabelle che hanno almeno 3 colonne. I pesi in questo caso sono multiplo e vengono rappresentati come un vettore
+"""
+
+boston = pd.read_csv("https://archive.ics.uci.edu/ml/machine-learning-databases/housing/housing.data", sep='\s+',
+                     names=["CRIM", "ZN", "INDUS", "CHAS", "NOX", "RM", "AGE", "DIS", "RAD", "TAX", "PRATIO", "B",
+                            "LSTAT", "MEDV"])
+
+print(boston.info())
+
+# print(boston.corr())
+
+import seaborn as sns
+
+sns.heatmap(boston.corr(), xticklabels=boston.columns, yticklabels=boston.columns)
+
