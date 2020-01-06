@@ -1,6 +1,8 @@
 from tkinter import *
 from tkinter.ttk import *
 
+#Inseritre imagini gif
+
 root = Tk()
 root.title("Img")
 
