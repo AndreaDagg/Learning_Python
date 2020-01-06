@@ -20,6 +20,7 @@ le parentesi e dunque bisogna escogitare qualcosa per passare diversamente i val
 """
 from random import randrange
 
+
 def rand():
     lista = ["ciao", "hello", "hola"]
     x = randrange(0, 3)
@@ -30,5 +31,20 @@ l1 = Label(ro, text="Sono label")
 l1.pack()
 btLabel = Button(ro, text="Cambia", command=rand)
 btLabel.pack()
+
+var1 = StringVar(value="")
+
+
+def send():
+    l2.config(text=var1.get())
+
+
+l2 = Label(ro, text="")
+bt1 = Button(ro, text="Send", command=send)
+imputText = Entry(ro, textvariable=var1)
+
+l2.pack()
+imputText.pack()
+bt1.pack()
 
 ro.mainloop()
