@@ -28,10 +28,21 @@ for i in range(len(shopping_list)):
 # Ciclo for con una lista con iterazione diretta
 # Iteriamo sulla liata e 'j' conterrà l'i-esimo elemento della lista solo con 'j' perdiamo però l'indice
 # per tornare ad averlo possiamo aggiungerlo 'i' con eneumerate
-
+print("----- Iterazione lista con j-mo elemento ------ ------")
 shopping_list = ["carne", "latte", "carote", "riso basmati", "sapone"]
 for i, j in enumerate(shopping_list):
     print("%d - %s" % (i + 1, j))
+
+
+
+'''
+@Break -> L'istruzione termina il ciclo che la contiene. Il controllo del programma passa all'istruzione immediatamente dopo il corpo del ciclo.
+Se l'istruzione è all'interno di un ciclo annidato (ciclo all'interno di un altro ciclo), l' breakistruzione terminerà il ciclo più interno.
+
+@Continue
+L' istruzione viene utilizzata per saltare il resto del codice all'interno di un ciclo solo per l'iterazione corrente. 
+Il ciclo non termina ma continua con l'iterazione successiva.
+'''
 
 # Ciclo while
 

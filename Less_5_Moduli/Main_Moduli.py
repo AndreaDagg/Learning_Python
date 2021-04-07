@@ -7,12 +7,12 @@ import Less_5_Moduli.Script
 
 print(Less_5_Moduli.Script.hello_Word())
 
-import Less_4_Funzioni.Main_Funzioni
+import Less_4_Funzioni_Classi.Main_Funzioni
 
-# print(Less_4_Funzioni.Main_Funzioni.Triangle.print_inf())
+# print(Less_4_Funzioni_Classi.Main_Funzioni.Triangle.print_inf())
 
 # Possiaqmo accedere alla specifica classe senza ripetere il modulo
-from Less_4_Funzioni.Main_Funzioni import triangle
+from Less_4_Funzioni_Classi.Main_Funzioni import triangle
 
 triangle.print_inf()
 

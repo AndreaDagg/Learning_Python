@@ -43,7 +43,7 @@ animals.insert(1, "giraffa")
 print(animals)
 
 # ---- TUPLE ----
-# Le tuple non sono modificabili un avolta definite. Si definiscono tramite parentesi tonde
+# Le tuple non sono modificabili una volta definite. Si definiscono tramite parentesi tonde
 
 my_tuple = (10, 5, 6, 3, 9)
 my_tuple[1]
@@ -90,23 +90,32 @@ set_nomi = set(lista_nomi)
 lista_nomi = list(set_nomi)
 
 # ---- FROZENSET ----
+''' Il set congelato è solo una versione immutabile di un oggetto set Python . Mentre gli elementi di un set possono
+    essere modificati in qualsiasi momento, gli elementi del set congelato rimangono gli stessi dopo la creazione.
+    Per questo motivo, i set congelati possono essere utilizzati come chiavi nel Dizionario o come elementi di un altro set. 
+    Ma come gli insiemi, non è ordinato (gli elementi possono essere impostati su qualsiasi indice). '''
 
 names = frozenset(set_nomi)
 
 # ---- DIZIONARI ----
 # Permettono di immagazzinare i dati in strutture key value
 
-items = {"latte": 3, "riso": 2, "carne": 34}
-items["latte"]  # da 3
-items["latte"] = 2
-items["cereali"] = 1  # aggiunge l'elemento
-items["yogurt"] = {"fragola": 2, "bianco": 4}
+dict = {"latte": 3,
+         "riso": 2,
+         "carne": 34}
 
-items["yogurt"]["fragola"] = 23
+dict["latte"]  # da 3
+dict["latte"] = 2
+dict["cereali"] = 1  # aggiunge l'elemento
+dict["yogurt"] = {"fragola": 2, "bianco": 4}
 
-items.keys()  # ritorna tutte le chiavi
-keys = list(items.keys())
-values = list(items.values())
+dict["yogurt"]["fragola"] = 23
 
-print(keys)
-print(values)
+dict.keys()  # ritorna tutte le chiavi
+keys = list(dict.keys())
+values = list(dict.values())
+
+print("Dizionari \nsolo le key: ",keys)
+print("solo i valori: ", values)
+
+print("dizionario: ", dict)
