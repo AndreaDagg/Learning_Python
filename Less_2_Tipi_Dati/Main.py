@@ -101,8 +101,8 @@ names = frozenset(set_nomi)
 # Permettono di immagazzinare i dati in strutture key value
 
 dict = {"latte": 3,
-         "riso": 2,
-         "carne": 34}
+        "riso": 2,
+        "carne": 34}
 
 dict["latte"]  # da 3
 dict["latte"] = 2
@@ -115,7 +115,26 @@ dict.keys()  # ritorna tutte le chiavi
 keys = list(dict.keys())
 values = list(dict.values())
 
-print("Dizionari \nsolo le key: ",keys)
+print("Dizionari \nsolo le key: ", keys)
 print("solo i valori: ", values)
 
 print("dizionario: ", dict)
+
+# ---- SPACCHETTAMENTO DI TUPLE/LISTE -----
+# x = 1 y = 2
+x, y = (1, 2)
+print(F"x = {x} \n y = {y}")
+
+for x, y in [(1, 2), (3, 4)]:
+    print(f"{x} -- {y}")
+    "x=1, y=2"
+    "x=3, y=4"
+
+''' se avessimo      >>> x, y = (1, 2, 3) ValueError: too many values to unpack (expected 2)
+    otterremo l'errore, ma se si utilizza '*' consente ad 'y' di consumare tutti gli argomenti rimanenti'''
+x, *y = (1, 2, 3, 4, 5, 6)
+
+'''
+x = 1 
+y = [2,3,4,5,6]
+'''
